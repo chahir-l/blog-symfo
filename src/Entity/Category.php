@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -47,6 +48,8 @@ class Category
     public function __construct()
     {
         $this->posts = new ArrayCollection();
+        $this->date_added = new \DateTime();
+        $this->date_updated = new \DateTime();
     }
 
     public function getId(): ?int

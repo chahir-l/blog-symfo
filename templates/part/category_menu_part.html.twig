@@ -1,0 +1,12 @@
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	<a class="dropdown-item" href="#">Action</a>
+	<a class="dropdown-item" href="#">Another action</a>
+	<div class="dropdown-divider"></div>
+	<a class="dropdown-item" href="{{ path('categories_list') }}">Categories</a>
+	{% for categorie in categories %}
+		<a class="dropdown-item" href="{# { path('article_show', {slug: categorie.slug}) } #}">
+			{{ categorie.name }}
+		</a>
+	{% endfor %}
+
+</div>
